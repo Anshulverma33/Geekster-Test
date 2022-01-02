@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Geekster Test Jan02</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .container {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }   
+            label {
+                padding: 12px 12px 12px 0;
+                display: inline-block;
+                
+            }   
+            input[type=text ], [type=password], [type=email], [type=date] {
+                width: 50%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+            } 
+            button{
+                background-color: rgb(17, 116, 50);
+                margin-left: 200px;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            h2{
+                margin-left:200px ;
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <div class="container">
+            <h2>Registration Form</h2>
+            <form >
+                <label>Full Name*</label><br/>
+                <input type="text" id="name" required placeholder="Enter Your Full Name"/><br/><br/>
+                <label>Email Address*</label><br/>
+                <input type="email" id="email" required placeholder="Enter Your Email" /><br/><br/>
+                <label>Gender*</label><br/>
+                <input type="radio" id="gender" name="gender" value="Male" required/>
+                <label>Male</label>
+                <input type="radio" id="genderf" name="gender" value="Female" required/>
+                <label>Female</label><br/><br/>
+                <label>Date of Birth*</label><br/>
+                <input type="date" id="DOB" required placeholder="Enter Your Date of Birth"/><br/><br/>
+                <label>Password*</label><br/>
+                <input type="password" id="pass" required placeholder="Enter your Password" minlength="5" maxlength="8"/><br/><br/>
+                <input type="checkbox" required/>
+                <label>Accept Terms and conditions.</label><br/>
+                <button type="button"  id="myButton">Submit</button>
+            </form>
+        </div>
+        <script>
+            document.getElementById("myButton").onclick = function(){
+            var myname = document.getElementById("name").value;
+            console.log("Name: "+myname);
+            var email = document.getElementById("email").value;
+            console.log("Email: "+email);
+            var gender = document.getElementById("gender").value;
+            console.log("Gender: "+gender);
+            //var gender = document.getElementById("genderf").value;
+            //console.log("Gender: "+gender);
+            var dateofbirth = document.getElementById("DOB").value;
+            console.log("Date of Birth: "+dateofbirth);
+            var password = document.getElementById("pass").value;
+            console.log("Password: **********");
+
+            }
+        </script>
+    </body>
+</html>
